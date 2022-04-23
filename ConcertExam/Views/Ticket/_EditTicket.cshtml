@@ -1,0 +1,23 @@
+﻿@model ConcertExam.Models.TicketViewModel
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Document" class="control-label"></label>
+            <input asp-for="Document" class="form-control" />
+            <span asp-validation-for="Document" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="EntranceId" class="control-label"></label>
+            <select asp-for="EntranceId" asp-items="Model.Entrances" class="form-control"></select>
+            <span asp-validation-for="EntranceId" class="text-danger"></span>
+        </div>
+    </div>
+</div>
